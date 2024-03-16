@@ -17,6 +17,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        this.initView()
+    }
+
+    fun initView() {
         val query = FirebaseDatabase.getInstance().reference.child("Posts")
         val options = FirebaseRecyclerOptions.Builder<Post>().setQuery(query,Post::class.java).build()
         adapter = PostAdapter(options)
@@ -24,11 +28,11 @@ class MainActivity : AppCompatActivity() {
         val rView : RecyclerView = findViewById(R.id.recyclerView)
         rView.layoutManager = LinearLayoutManager(this)
         rView.adapter = adapter
-
     }
 
     override fun onStart() {
         super.onStart()
         adapter?.startListening()
     }
+
 }
