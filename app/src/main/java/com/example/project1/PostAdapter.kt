@@ -21,9 +21,7 @@ class PostAdapter(options: FirebaseRecyclerOptions<Post>) : FirebaseRecyclerAdap
 
         holder.txtTitle.text = model.title
         holder.txtDescription.text = model.description
-
         val profileUrl = model.image
-
         Glide.with(holder.itemView.context).load(profileUrl).into(holder.userProfile)
         Glide.with(holder.itemView.context).load(profileUrl).into(holder.image)
 
