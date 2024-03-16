@@ -18,32 +18,15 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:layout_width="80dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="5dp"
-                android:paddingStart="10dp"
-                android:scaleType="fitStart"
-                android:layout_gravity="center"
-                android:layout_centerVertical="true"
-                android:src="@drawable/logo"/>
-
-            <ImageView
-                android:id="@+id/logoutBtn"
-                android:paddingTop="5dp"
+                android:id="@+id/backBtn"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentEnd="true"
-                android:src="@drawable/logout"/>
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/short_left"
+                app:tint="@color/white" />
 
-            <ImageView
-                android:id="@+id/cartBtn"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="45dp"
-                android:layout_alignParentEnd="true"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_cart"/>
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
