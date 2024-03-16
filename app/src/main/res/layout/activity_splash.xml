@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:src="@drawable/img_splash_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:padding="100dp"
+        android:scaleType="centerCrop"
+        android:alpha="0.5"
+        android:visibility="gone"
+        android:layout_marginTop="-100dp"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/splash"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/appNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/lato_regular"
+        android:text="@string/stat_your_journey_nwith_nike"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/join_btn"
+        app:layout_constraintStart_toStartOf="@id/join_btn" />
+
+    <Button
+        android:id="@+id/join_btn"
+        android:layout_width="100dp"
+        android:layout_height="52dp"
+        android:text="@string/join_us"
+        android:fontFamily="@font/lato_bold"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        android:elevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="25dp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="2dp"/>
+    <Button
+        android:id="@+id/signin_btn"
+        android:layout_width="100dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="10dp"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/sing_in"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/join_btn"
+        app:layout_constraintLeft_toRightOf="@id/join_btn"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
