@@ -28,22 +28,6 @@
             android:layout_gravity="center"
             android:src="@drawable/logo"/>
 
-        <ImageView
-            android:id="@+id/cartBtn"
-            android:layout_marginRight="50dp"
-            android:layout_gravity="center_vertical|end"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_cart"/>
-
-        <ImageView
-            android:id="@+id/logoutBtn"
-            android:paddingTop="5dp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center_vertical|end"
-            android:layout_marginEnd="10dp"
-            android:src="@drawable/logout"/>
     </androidx.cardview.widget.CardView>
 
     <ScrollView
@@ -57,20 +41,39 @@
             android:orientation="vertical"
             android:padding="15dp">
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/viewpager"
+            <ImageView
+                android:id="@+id/profileImage"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"/>
-
+                android:layout_height="350dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/placeholder"
+                />
 
             <TextView
                 android:id="@+id/cName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="8dp"
+                android:layout_marginTop="10dp"
                 android:text="Candidate Name"
                 android:textSize="22dp"
                 android:fontFamily="@font/poppins_bold"/>
+            <TextView
+                android:id="@+id/crole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Role"
+                android:textSize="22dp"
+                android:fontFamily="@font/poppins_medium"/>
+            <TextView
+                android:id="@+id/ccountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Country"
+                android:textSize="22dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/poppins_medium"/>
 
             <View
                 android:layout_width="match_parent"
@@ -78,25 +81,31 @@
                 android:alpha="0.5"
                 android:background="#808080"/>
 
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="8dp">
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:text="Description"
-                    android:textSize="22dp"
-                    android:fontFamily="@font/poppins_bold"/>
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/ic_right_arrow"
-                    />
-            </LinearLayout>
+                android:layout_weight="0.5"
+                android:text="About"
+                android:textSize="22dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_bold"/>
+            <TextView
+                android:id="@+id/idAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18dp"
+                android:paddingTop="8dp"
+                android:fontFamily="@font/poppins_regular"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Skills"
+                android:textSize="22dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_bold"/>
             <TextView
                 android:id="@+id/cDescription"
                 android:layout_width="match_parent"
@@ -106,8 +115,60 @@
                 android:paddingTop="8dp"
                 android:fontFamily="@font/poppins_regular"/>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Experience"
+                android:textSize="22dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_bold"/>
+            <TextView
+                android:id="@+id/cexperience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18dp"
+                android:paddingTop="8dp"
+                android:fontFamily="@font/poppins_regular"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Education"
+                android:textSize="22dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_bold"/>
+            <TextView
+                android:id="@+id/idEducation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18dp"
+                android:paddingTop="8dp"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="Certificates"
+                android:textSize="22dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_bold"/>
+            <TextView
+                android:id="@+id/idCertificates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18dp"
+                android:paddingTop="8dp"
+                android:fontFamily="@font/poppins_regular"/>
+
 
         </LinearLayout>
+
+
     </ScrollView>
 
     <LinearLayout
@@ -120,7 +181,7 @@
 
 
         <Button
-            android:id="@+id/purchaseBtn"
+            android:id="@+id/connectBtn"
             android:layout_width="0dp"
             android:layout_height="65dp"
             android:layout_weight="1"

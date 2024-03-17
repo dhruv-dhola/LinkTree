@@ -24,6 +24,8 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
+
+        // Here we check if user already login or not
         val currentUser = auth.currentUser
         if (currentUser != null) {
             val i = Intent(this, MainActivity::class.java)

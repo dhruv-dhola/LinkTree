@@ -10,6 +10,8 @@ import com.bumptech.glide.Glide
 import com.example.project1.Models.Post
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 
 class PostAdapter(options: FirebaseRecyclerOptions<Post>) : FirebaseRecyclerAdapter<Post, PostAdapter.MyViewHolder>(options){
 
@@ -21,9 +23,13 @@ class PostAdapter(options: FirebaseRecyclerOptions<Post>) : FirebaseRecyclerAdap
 
         holder.txtTitle.text = model.title
         holder.txtDescription.text = model.description
-        val profileUrl = model.image
-        Glide.with(holder.itemView.context).load(profileUrl).into(holder.userProfile)
-        Glide.with(holder.itemView.context).load(profileUrl).into(holder.image)
+        val profileUrl = model.userProfile
+        var postUrl = model.image
+        val storageRefProfile: StorageReference = FirebaseStorage.getInstance().getReferenceFromUrl(model.userProfile)
+        val storageRefPost: StorageReference = FirebaseStorage.getInstance().getReferenceFromUrl(model.image)
+
+        Glide.with(holder.itemView.context).load(storageRefProfile).into(holder.userProfile)
+        Glide.with(holder.itemView.context).load(storageRefPost).into(holder.image)
 
     }
     class MyViewHolder(inflater: LayoutInflater, parent: ViewGroup)

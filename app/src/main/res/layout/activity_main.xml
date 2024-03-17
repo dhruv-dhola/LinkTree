@@ -28,7 +28,8 @@
             android:layout_height="30dp"
             android:layout_gravity="center_vertical|end"
             android:layout_marginEnd="60dp"
-            android:src="@drawable/ic_cart"/>
+            app:tint="@color/white"
+            android:src="@drawable/user"/>
 
         <ImageView
             android:id="@+id/logoutBtn"

@@ -11,4 +11,5 @@ data class User(val certificate: String = "",
                 val skills: String = "",
                 val uid: String = "",
                 val country: String = "",
-                val role: String = "")
+                val role: String = "",
+                val education: String = "")

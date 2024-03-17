@@ -39,6 +39,7 @@ class SignupActivity : AppCompatActivity() {
 
 
     fun bindWidgets() {
+        //bind all the widgets and set click listeners
         emailTextField = findViewById(R.id.email)
         passwordTextField = findViewById(R.id.password)
         confirmPasswordTxtField = findViewById(R.id.confirmPassword)

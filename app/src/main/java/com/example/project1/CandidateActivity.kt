@@ -29,22 +29,7 @@ class CandidateActivity : AppCompatActivity() {
     fun initView() {
         backBtn = findViewById(R.id.backBtn)
 
-//        val query = FirebaseDatabase.getInstance().reference.child("Users")
-//        query.get().addOnCompleteListener { task ->
-//            if (task.isSuccessful) {
-//                val dataSnapshot = task.result
-//                if (dataSnapshot != null) {
-//                    for (snapshot in dataSnapshot.children) {
-//                        val user = snapshot.getValue(User::class.java)
-//                        Log.d("FirebaseData", user.toString())
-//                    }
-//                }
-//            } else {
-//                Log.e("FirebaseData", "Error getting data", task.exception)
-//            }
-//        }
-
-        val query = FirebaseDatabase.getInstance().reference.child("Users")
+        val query = FirebaseDatabase.getInstance().reference.child("Candidate")
         query.get().addOnCompleteListener {  }
         val options = FirebaseRecyclerOptions.Builder<User>().setQuery(query, User::class.java).build()
         adapter = CandidateAdapter(options)

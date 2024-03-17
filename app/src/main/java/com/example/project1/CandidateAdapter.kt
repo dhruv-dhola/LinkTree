@@ -27,13 +27,12 @@ class CandidateAdapter(options: FirebaseRecyclerOptions<User>) : FirebaseRecycle
         holder.txtCountry.text = model.country
         holder.txtRole.text = model.role
         holder.txtName.text = model.name
-        Log.i("namsmsfsdm", model.email)
         val storageRef: StorageReference = FirebaseStorage.getInstance().getReferenceFromUrl(model.photo)
         Glide.with(holder.itemView.context).load(storageRef).into(holder.userProfile)
         holder.itemView.setOnClickListener {
             val i = Intent(it.context, CandidateDetailsActivity::class.java)
-//            val productObjectStr = Gson().toJson(model)
-//            i.putExtra("product", productObjectStr)
+            val tempObj = Gson().toJson(model)
+            i.putExtra("candidate", tempObj)
             it.context.startActivity(i)
         }
     }
